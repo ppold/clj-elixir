@@ -1,0 +1,198 @@
+body {
+    font: 11px/1.5 "Lucida Grande", "Lucida Sans", tahoma, sans-serif;
+    background: #eeeeee;
+    color: #666666;
+}
+
+body, h1, h2, p, fieldset {
+    margin: 0;
+}
+
+fieldset {
+    padding: 0;
+    border: 0;
+}
+
+#canvas {
+    margin: 0 auto;
+}
+
+#main {
+    position: absolute;
+    left: 0;
+    right: 256px;
+    overflow: auto;
+    padding: 30px;
+    z-index: 1;
+}
+
+h1 {
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    position: relative;
+    z-index: 1;
+    float: left;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    font: inherit;
+    font-size: 11px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #666666;
+}
+
+#main, #sidebar {
+    top: 0;
+    bottom: 0;
+}
+
+#sidebar, #toolbar, h2 {
+    background-color: #111111;
+}
+
+#sidebar {
+    width: 256px;
+    position: absolute;
+    right: 0;
+    color: #999999;
+    -webkit-user-select: none;
+    cursor: default;
+    overflow-y: auto;
+}
+
+.panel {
+    position: fixed;
+    background: repeat-x;
+    background-size: 100% 35px;
+    background-image: linear-gradient(#282828, #111111);
+    padding: 0 15px 15px;
+}
+
+.panel:not(:first-child) {
+    box-shadow: inset 0 1px 0 #3e3e3e, 0 -1px 0 #090909;
+}
+
+#toolbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#toolbar button {
+    display: block;
+    float: left;
+    width: 23px;
+    height: 23px;
+    margin-right: 4px;
+    text-indent: -9999px;
+    background: no-repeat center center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+#toolbar button.selected {
+    background-color: #090909;
+    border-color: #222222;
+    box-shadow: inset 2px 2px 2px black;
+}
+
+#toolbar #selectTool {
+    background-image: url("/images/select.png");
+}
+
+#toolbar #penTool {
+    background-image: url("/images/pen.png");
+}
+
+#toolbar #ellipseTool {
+    background-image: url("/images/ellipse.png");
+}
+
+#toolbar #polygonTool {
+    background-image: url("/images/polygon.png");
+}
+
+#toolbar #rectTool {
+    background-image: url("/images/rectangle.png");
+}
+
+label.brief input[type=text] {
+    padding-left: 30px;
+}
+
+input[type=text] {
+    margin: 0;
+    border: 0;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    background: #222222;
+    color: white;
+}
+
+input[type=text], label {
+    -webkit-box-sizing: border-box;
+}
+
+input[type=text], label {
+    width: 100%;
+}
+
+input[type=text], label.brief span {
+    padding: 4px;
+}
+
+label.brief span {
+    position: absolute;
+    top: 0;
+    width: 15px;
+    text-align: right;
+    background: transparent;
+    color: #999999;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-color: #666666;
+}
+
+.panel label.half:nth-child(2n-1) {
+    padding-left: 0;
+}
+
+label.brief {
+    position: relative;
+}
+
+label.half {
+    float: left;
+    width: 50%;
+    margin-bottom: 4px;
+    padding: 0 2px;
+}
+
+h2 + * {
+    display: block;
+    clear: both;
+}
+
+.panel > section {
+    position: relative;
+}
+
+.panel > section:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.panel > section:not(:empty):before {
+    content: "";
+    position: absolute;
+    top: 0.6em;
+    z-index: 0;
+    width: 100%;
+    border-top: 1px solid #292929;
+}

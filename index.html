@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Elixir</title>
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    <section id="main">
+      <figure id="canvas" style="width: 900px; height: 600px;">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="10" height="10" fill="#ccc" />
+              <rect x="10" y="0" width="10" height="10" fill="white" />
+              <rect x="10" y="10" width="10" height="10" fill="#ccc" />
+              <rect x="0" y="10" width="10" height="10" fill="white" />
+            </pattern>
+          </defs>
+          <rect style="pointer-events: none;" x="0" y="0" width="100%" height="100%" fill="url(#grid)" />
+          <g id="elements"></g>
+        </svg>
+      </figure>
+    </section>
+    <aside id="sidebar"></aside>
+    <script src="/scripts/react.js"></script>
+    <script src="/scripts/out/goog/base.js"></script>
+    <script src="/scripts/main.js"></script>
+    <script>goog.require("elixir.app");</script>
+  </body>
+</html>
